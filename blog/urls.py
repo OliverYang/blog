@@ -19,6 +19,6 @@ from blog.article import views as article_views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', article_views.index),
+    url(r'^$', article_views.index, name='index'),
     url(r'^(?P<article_id>\d+)/$', article_views.detail, name='detail'),
 ]
